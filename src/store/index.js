@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    Datos:[],
   },
   mutations: {
+    addDatos (state, datos) {
+        state.Datos.push(datos)
+    }
   },
-  actions: {
-  },
-  modules: {
+
+  getters: {
+    Datos: state => state.Datos,
   }
 })
